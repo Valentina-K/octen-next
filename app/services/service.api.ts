@@ -1,4 +1,3 @@
-'use server';
 import { ICar } from "../models/ICar";
 
 const baseUrl = "http://owu.linkpc.net/carsAPI/v1/";

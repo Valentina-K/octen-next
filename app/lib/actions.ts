@@ -1,3 +1,5 @@
+'use server';
+
 import {addCar} from "@/app/services/service.api";
 import {ICar} from "@/app/models/ICar";
 
