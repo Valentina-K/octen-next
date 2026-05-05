@@ -8,10 +8,8 @@ export const getCars = async (): Promise<ICar[]> => {
     return await response.json() as ICar[];
 }
 
-export const createCar = async (formData: FormData): Promise<void> => {
-    const brand = formData.get("brand");
-    const price = formData.get("price");
-    const year = formData.get("year");
+export const addCar = async (car: ICar): Promise<void> => {
+    const {brand, price, year} = car;
     await fetch(baseUrl+'cars', {
         method: 'POST',
         headers: {

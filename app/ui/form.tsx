@@ -1,8 +1,9 @@
 'use client';
-import {createCar} from "@/app/services/service.api";
+
 import Form from "next/form";
 import {useForm} from 'react-hook-form';
 import {ICar} from "@/app/models/ICar";
+import {createCar} from "@/app/lib/actions";
 
 export const FormComponent = () => {
     const {register, formState: {errors, isValid}} = useForm<ICar>({mode: 'onChange'});
