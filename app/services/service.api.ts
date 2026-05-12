@@ -16,6 +16,7 @@ export const addCar = async (car: ICar): Promise<void> => {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({brand, price, year}),
+        cache: "no-store"
     });
 
 }
