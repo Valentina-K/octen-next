@@ -3,7 +3,10 @@ import { ICar } from "../models/ICar";
 const baseUrl = "http://owu.linkpc.net/carsAPI/v1/";
 
 export const getCars = async (): Promise<ICar[]> => {
-    const response = await fetch(baseUrl+'cars');
+    const response = await fetch(baseUrl+'cars',{
+        method: 'GET',
+        cache: "no-store"
+    });
     return await response.json() as ICar[];
 }
 
@@ -16,7 +19,6 @@ export const addCar = async (car: ICar): Promise<void> => {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({brand, price, year}),
-        cache: "no-store"
     });
 
 }

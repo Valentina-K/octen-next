@@ -3,7 +3,7 @@
 import Form from "next/form";
 import {useForm} from 'react-hook-form';
 import {ICar} from "@/app/models/ICar";
-import {createCar} from "@/app/lib/actions";
+import {createCar} from "@/app/actions/actions";
 import schema from '@/app/lib/validate';
 
 export const FormComponent = () => {
