@@ -7,10 +7,11 @@ const schema = Joi.object({
         'string.min': 'The minimum length of a brand name is 1 character',
         'string.max': 'The maximum length of a brand name is 20 characters',
         'any.required': 'Enter the brand',
-        'string.pattern': 'Use letters, numbers or symbols -&',
+        'string.pattern': 'Use letters or numbers',
     }),
     price: Joi.number().min(0).max(1000000).required().messages({
         'number.min': 'The price must be greater than 0',
+        'number.max': 'The price must be greater than 1000000',
         'any.required': 'Enter the price',
     }),
     year: Joi.number().min(1990).max(2026).required().messages({
